@@ -17,5 +17,6 @@ route.get('/', (request, response) => {
 
 route.post('/repositories', Repositories.store);
 route.get('/repositories', Repositories.index);
+route.delete('/repositories', Repositories.delete);
 
 export default route;

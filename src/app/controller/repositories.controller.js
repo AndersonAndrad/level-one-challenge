@@ -24,6 +24,20 @@ class RepositoriesController {
   async update(request, response) {
     return response.json({ status: 'ok' });
   }
+
+  async delete(request, response) {
+    const { id } = request.body;
+
+    const projectIndex = projects.find((project) => project.id == id);
+
+    if (projectIndex < 0) {
+      return response.status(400).json({ Status: 'Project not found' });
+    }
+
+    projects.splice(projectIndex, 1);
+
+    return response.status(204).send();
+  }
 }
 
 export default new RepositoriesController();
