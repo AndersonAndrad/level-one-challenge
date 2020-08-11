@@ -1,2 +1,3 @@
-// Controller
-import Repositories from '../../app/controller/repositories.controller';
+it('testing to see if jest works', () => {
+  expect(1).toBe(1);
+});

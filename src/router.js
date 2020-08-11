@@ -22,4 +22,8 @@ route.put('/repositories', Repositories.update);
 
 route.put('/like', Repositories.like);
 
+route.get('/test', async (req, res) => {
+  res.json({ message: 'pass!' });
+});
+
 export default route;
