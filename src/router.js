@@ -17,7 +17,7 @@ route.get('/', (request, response) => {
 
 route.post('/repositories', Repositories.store);
 route.get('/repositories', Repositories.index);
-route.delete('/repositories', Repositories.delete);
+route.delete('/repositories/:id', Repositories.delete);
 route.put('/repositories', Repositories.update);
 
 route.put('/like', Repositories.like);

@@ -43,7 +43,7 @@ class RepositoriesController {
   }
 
   async delete(request, response) {
-    const { id } = request.body;
+    const { id } = request.params;
 
     const projectIndex = projects.find((project) => project.id == id);
 
